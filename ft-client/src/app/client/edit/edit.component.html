@@ -1,0 +1,43 @@
+﻿<h1 *ngIf="isAddClient">Add Client</h1>
+<h1 *ngIf="!isAddClient">Edit Client</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col-5">
+            <label>Name</label>
+            <input type="text" formControlName="nome" class="form-control" [ngClass]="{ 'is-invalid': submitted && fc.nome.errors }" />
+            <div *ngIf="submitted && fc.nome.errors" class="invalid-feedback">
+                <div *ngIf="fc.nome.errors.required">Nome is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-5">
+            <label>Email</label>
+            <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && fc.email.errors }" />
+            <div *ngIf="submitted && fc.email.errors" class="invalid-feedback">
+                <div *ngIf="fc.email.errors.required">Email is required</div>
+                <div *ngIf="fc.email.errors.email">Email address is not valid</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-2">
+            <label>Years old</label>
+            <input type="text" formControlName="idade" class="form-control" [ngClass]="{ 'is-invalid': submitted && fc.idade.errors }" />
+            <div *ngIf="submitted && fc.idade.errors" class="invalid-feedback">
+                <div *ngIf="fc.idade.errors.required">Idade is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row" style="margin-left: 1px;">
+            <button [disabled]="loading" class="btn btn-primary">
+                Save
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            </button>
+            <div style="margin-left: 1%;">
+                <a routerLink="/client" class="btn btn-light" style="border: 1px solid">Cancel</a>
+            </div>
+        </div>
+    </div>
+</form>
