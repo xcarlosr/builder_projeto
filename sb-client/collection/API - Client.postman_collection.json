@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "5e10fecf-d0a3-47ea-9018-8be4dbf86266",
+		"name": "API - Client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find all client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sb-client/api/v1/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sb-client",
+						"api",
+						"v1",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sb-client/api/v1/client/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sb-client",
+						"api",
+						"v1",
+						"client",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by param",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sb-client/api/v1/client/find?param=gmail",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sb-client",
+						"api",
+						"v1",
+						"client",
+						"find"
+					],
+					"query": [
+						{
+							"key": "param",
+							"value": "gmail"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all paginator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sb-client/api/v1/client?page=1&size=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sb-client",
+						"api",
+						"v1",
+						"client"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Carlos Roberto\",\r\n  \"email\": \"carlos_roberto@bol.com.br\",\r\n  \"idade\": \"22\",\r\n  \"dataCadastro\": \"2021-08-02T10:00:00\"\r\n  \r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/sb-client/api/v1/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sb-client",
+						"api",
+						"v1",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Client",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "Application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Alvaro Matos Melo\",\r\n  \"email\": \"alvado_melo@bol2.com.br\",\r\n  \"idade\": \"23\",\r\n  \"dataCadastro\": \"2021-08-06T13:00:00\"\r\n  \r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/sb-client/api/v1/client/8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sb-client",
+						"api",
+						"v1",
+						"client",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Client",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sb-client/api/v1/client/13",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sb-client",
+						"api",
+						"v1",
+						"client",
+						"13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
