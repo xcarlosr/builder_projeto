@@ -20,17 +20,16 @@ O projeto utiliza o docker composer para subir as aplicações.
   - Disponibilizado para teste no heroku para quem não tenha o docker instalado, pode acessar a aplicação em:
   https://app-client-web.herokuapp.com/client, lembrando que demoram um pouco para o heroku subir as instancias.
 
-
 # Swagger API REST
 
-![Optional Text](/sb-client/imgs/swagger-api-rest)
+![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/swagger-api-rest)
 
 # Postman API REST
 
-![Optional Text](/sb-client/imgs/postman-api)
+![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/postman-api)
 
-![Optional Text](/sb-client/imgs/postman-api-resposta)
+![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/postman-api-resposta)
 
 # Heroku - Angular
 
-![Optional Text](/sb-client/imgs/front-end-angular)
+![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/front-end-angular)
