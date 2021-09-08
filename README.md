@@ -20,7 +20,7 @@ O projeto utiliza o docker composer para subir as aplicações.
   - Disponibilizado mais uma alterantiva para testar a aplicação
   - front-end: https://app-client-web.herokuapp.com/client
   - back-end: https://client-back.herokuapp.com/api/v1/client
-  - Lembrando que demoram um pouco para o heroku subir as instancias.
+  - Lembrando que demora um pouco para que o heroku subir as instâncias de cada aplicação.
 
 # Swagger API REST
 
