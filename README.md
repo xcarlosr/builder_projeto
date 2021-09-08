@@ -1,4 +1,4 @@
-# MVP Client com Angular + Spring Boot + MySql
+# MVP Crud Client com Angular + Spring Boot + MySql
 O projeto utiliza o docker composer para subir as aplicações.
 
 ## sb-client: Integra o back-end da solução.
