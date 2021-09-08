@@ -16,9 +16,10 @@ O projeto utiliza o docker composer para subir as aplicações.
   `docker compose up --build --force-recreate -d` para realizar o build e subir as aplicações e para stopar as aplicações `docker compose stop`.
   - Para acessar a aplicação localmente: http://localhost/client/
   
-## Heroku aplicação web Angular
-  - Disponibilizado para teste no heroku para quem não tenha o docker instalado, podendo acessar a aplicação para o front-end:
-  https://app-client-web.herokuapp.com/client, back-end: https://client-back.herokuapp.com/api/v1/client
+## Heroku aplicação web Angular com Spring Boot
+  - Disponibilizado mais uma alterantiva para testar a aplicação
+  - front-end: https://app-client-web.herokuapp.com/client
+  - back-end: https://client-back.herokuapp.com/api/v1/client
   - Lembrando que demoram um pouco para o heroku subir as instancias.
 
 # Swagger API REST
