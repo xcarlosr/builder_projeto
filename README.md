@@ -4,7 +4,7 @@ O projeto utiliza o docker composer para subir as aplicações.
 ## sb-client: Integra o back-end da solução.
   - Utilizado o consceito de DDD (Domain-driven Design) ao implementar, separa o projeto em camadas (Controllers, Services, Models e Repositorys) de acordo com suas responsabilidades.
   - Possui um o aquivo `/collection/API - Client.postman_collection.json` onde pode ser importado no posmtman para facilitar os teste da API REST.
-  - A pasta *mysql* é referenciada pelo docker compose para manter os do mysql quando precisar reiniciar a aplicação.
+  - A pasta *mysql* é referenciada pelo docker compose para salvar localmente os dados do banco mysql, permitindo reiniciar a aplicação sem perder os dados do banco rodando no container.
   - Ao inicianr a plicação é possivel acessar o Swagger: http://localhost:8080/sb-client/swagger-ui/ e validar a API REST.
   - Nos teste foi utilizado o *Junit* com o *Mockito*.
 
