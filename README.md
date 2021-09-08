@@ -22,14 +22,14 @@ O projeto utiliza o docker composer para subir as aplicações.
 
 # Swagger API REST
 
-![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/swagger-api-rest)
+![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/swagger-api-rest.png)
 
 # Postman API REST
 
-![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/postman-api)
+![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/postman-api.png)
 
-![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/postman-api-resposta)
+![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/postman-api-resposta.png)
 
 # Heroku - Angular
 
-![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/front-end-angular)
+![Screenshot](https://github.com/xcarlosr/builder_projeto/blob/main/sb-client/imgs/front-end-angular.png)
