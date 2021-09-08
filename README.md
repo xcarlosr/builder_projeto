@@ -9,16 +9,17 @@ O projeto utiliza o docker composer para subir as aplicações.
   - Nos teste foi utilizado o *Junit* com o *Mockito*.
 
 ## ft-client: Integra o front-end da solução.
-  - Possui uma tela com paginação do resultado e podemos pesquisar, adicionar, editar e deletar os clientes na aplicação.
+  - Possui uma tela principal com paginação dos dados que podemos pesquisar (por nome, email e idade), adicionar, editar e deletar os clientes na aplicação.
 
 ## Docker compose
-  - Ao baixar a aplicação localmente, no diretorio raiz tem o arquivo *docker-compose.yml*, executar no prompt de comando para realizar o build e subir as aplicações: 
-  `docker compose up --build --force-recreate -d` e para stopar as aplicações: `docker compose stop`
-  - Acessando a aplicação localmente: http://localhost/client/
+  - Fazer o clone ou baixar a aplicação, no diretorio raiz tem o arquivo *docker-compose.yml*, no prompt o comando, executar
+  `docker compose up --build --force-recreate -d` para realizar o build e subir as aplicações e para stopar as aplicações `docker compose stop`.
+  - Para acessar a aplicação localmente: http://localhost/client/
   
 ## Heroku aplicação web Angular
-  - Disponibilizado para teste no heroku para quem não tenha o docker instalado, pode acessar a aplicação em:
-  https://app-client-web.herokuapp.com/client, lembrando que demoram um pouco para o heroku subir as instancias.
+  - Disponibilizado para teste no heroku para quem não tenha o docker instalado, podendo acessar a aplicação para o front-end:
+  https://app-client-web.herokuapp.com/client, back-end: https://client-back.herokuapp.com/api/v1/client
+  - Lembrando que demoram um pouco para o heroku subir as instancias.
 
 # Swagger API REST
 
