@@ -1,0 +1,42 @@
+version: '3.4'
+services:
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3308:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=builder
+    volumes:
+      - /sb-client/mysql:/var/lib/mysql
+    restart: always       
+    networks:
+      - rest
+  client-rest:
+    image: sb-client-rest
+    build:
+      context: .
+      dockerfile: /sb-client/Dockerfile
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - rest
+    depends_on:
+      - db
+  angular:
+    image: angular-12:0.0.1
+    build:
+      context: .
+      dockerfile: /ft-client/Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+    networks:
+      - rest
+    depends_on:
+      - db
+networks:
+  rest:
+    driver: bridge
