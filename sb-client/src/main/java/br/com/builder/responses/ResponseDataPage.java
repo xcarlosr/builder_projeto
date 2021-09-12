@@ -1,4 +1,4 @@
-package br.com.builder.reponses;
+package br.com.builder.responses;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ReponseDataPage {
+public class ResponseDataPage {
 	Object data;
 	String message;
 	String status;

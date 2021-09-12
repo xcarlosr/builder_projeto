@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.builder.model.Client;
-import br.com.builder.reponses.ReponseDataPage;
+import br.com.builder.responses.ResponseDataPage;
 import br.com.builder.service.ClientService;
 
 @CrossOrigin
@@ -37,61 +37,61 @@ public class ClientController {
 	private ModelMapper modelMapper;
 	
 	@GetMapping
-	public ReponseDataPage findAll (
+	public ResponseDataPage findAll (
 			@RequestParam(value = "page", defaultValue = "0", required = false) int page,
 			@RequestParam(value = "size", defaultValue = "5", required = false) int size) {
 		
 		Page<Client> pageResult = clientService.findAll(PageRequest.of(page, size, SORT_BY_NOME));
-		return ReponseDataPage.builder().data(pageResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
+		return ResponseDataPage.builder().data(pageResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
 	}
 	
 	@GetMapping(path = "/find")
-	public ReponseDataPage findByParametter(
+	public ResponseDataPage findByParametter(
 			@RequestParam(value = "param", required = false) String param,
 			@RequestParam(value = "page", defaultValue = "0", required = false) int page,
 			@RequestParam(value = "size", defaultValue = "5", required = false) int size
 			) {
 		
 		Page<Client> pageResult =  clientService.findByParameter(param, PageRequest.of(page, size, SORT_BY_NOME));
-		return ReponseDataPage.builder().data(pageResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
+		return ResponseDataPage.builder().data(pageResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
 	}
 	
 	@GetMapping(path = "/{id}")
-	public ReponseDataPage findById(
+	public ResponseDataPage findById(
 			@PathVariable(value = "id") Long id) {
 		Client clientResult = clientService.findById(id);
-		return ReponseDataPage.builder().data(clientResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
+		return ResponseDataPage.builder().data(clientResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
 	}
 	
 	@GetMapping(path = "/find/data")
-	public ReponseDataPage findByDataCadastro(
+	public ResponseDataPage findByDataCadastro(
 			@RequestParam(value = "data") String data,
 			@RequestParam(value = "page", defaultValue = "0", required = false) int page,
 			@RequestParam(value = "size", defaultValue = "5", required = false) int size) throws Exception
 	{
 		Page<Client> pageResult = clientService.findByDataCadastro(data, PageRequest.of(page, size, SORT_BY_NOME));
-		return ReponseDataPage.builder().data(pageResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
+		return ResponseDataPage.builder().data(pageResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
 	}
 	
 	@PostMapping
-	public ReponseDataPage save(@RequestBody Client client) {
+	public ResponseDataPage save(@RequestBody Client client) {
 		Client clientResult = clientService.save(client);
-		return ReponseDataPage.builder().data(clientResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
+		return ResponseDataPage.builder().data(clientResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
 	}
 
 	@PutMapping(path = "/{id}")
-	public ReponseDataPage update(@PathVariable("id") long id, @RequestBody Client client) {
+	public ResponseDataPage update(@PathVariable("id") long id, @RequestBody Client client) {
 		Client clientModel = modelMapper.map(client, Client.class);
 		clientModel.setId(id);
 		Client clientResult = clientService.update(clientModel);
-		return ReponseDataPage.builder().data(clientResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
+		return ResponseDataPage.builder().data(clientResult).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
 	}
 	
 	@DeleteMapping(path = "/{id}")
-	public ReponseDataPage delete(@PathVariable(value = "id") Long id) {
+	public ResponseDataPage delete(@PathVariable(value = "id") Long id) {
 		Client clientDB = clientService.findById(id);
 		clientService.delete(clientDB);
-		return ReponseDataPage.builder().data(clientDB).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
+		return ResponseDataPage.builder().data(clientDB).message(MSG_SUCCESS).status(HttpStatus.OK.toString()).build();
 	}
 	
 }
