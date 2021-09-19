@@ -17,7 +17,7 @@ O projeto utiliza o docker composer para subir as aplicações.
   - Para acessar a aplicação localmente: http://localhost/client/
   
 ## Heroku aplicação web Angular com Spring Boot
-  - Disponibilizado mais uma alterantiva para testar a aplicação
+  - Disponibilizado mais uma alternativa para testar a aplicação
   - front-end: https://app-client-web.herokuapp.com/client
   - back-end: https://client-back.herokuapp.com/api/v1/client
   - Lembrando que demora um pouco para que o heroku subir as instâncias de cada aplicação.
